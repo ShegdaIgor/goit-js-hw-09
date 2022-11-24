@@ -1,11 +1,11 @@
-btnStart = document.querySelector('button[data-start]');
-btnStop = document.querySelector('button[data-stop]');
-
-let intervalId = null;
+const btnStart = document.querySelector('button[data-start]');
+const btnStop = document.querySelector('button[data-stop]');
 
 btnStart.addEventListener('click', startBtnHandler);
 btnStop.addEventListener('click', stopBtnHandler);
 btnStop.setAttribute('disabled', true);
+
+let intervalId = null;
 
 function startBtnHandler() {
   intervalId = setInterval(getBodyColor, 1000);
